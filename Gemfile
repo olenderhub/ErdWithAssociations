@@ -53,5 +53,9 @@ group :development, :test do
   gem 'shoulda-matchers'
 
   gem 'rubocop'
+
+  gem 'simplecov'
+
+  gem 'simplecov-rcov'
 end
 
