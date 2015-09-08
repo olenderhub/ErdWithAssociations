@@ -51,5 +51,7 @@ group :development, :test do
   gem 'ffaker'
 
   gem 'shoulda-matchers'
+
+  gem 'rubocop'
 end
 
