@@ -49,5 +49,7 @@ group :development, :test do
   gem 'faker'
 
   gem 'ffaker'
+
+  gem 'shoulda-matchers'
 end
 
