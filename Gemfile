@@ -59,5 +59,7 @@ group :development, :test do
   gem 'simplecov-rcov'
 
   gem 'rails-erd'
+
+  gem 'awesome_print'
 end
 
