@@ -9,8 +9,8 @@ ERD diagram for associations with information about Markdown
 - [x] has_many
 - [x] has_many :through
 - [x] has_one :through
-- [ ] has_and_belongs_to_many
-- [ ] has_and_belongs_to_many vs has_many :through
+- [x] has_and_belongs_to_many
+- [x] has_and_belongs_to_many vs has_many :through
 
 ---
 

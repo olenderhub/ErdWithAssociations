@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150908233054) do
+ActiveRecord::Schema.define(version: 20150908235250) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,26 @@ ActiveRecord::Schema.define(version: 20150908233054) do
     t.string   "email"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "companies", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "companies_employees", force: :cascade do |t|
+    t.integer "company_id"
+    t.integer "employee_id"
+  end
+
+  add_index "companies_employees", ["company_id"], name: "index_companies_employees_on_company_id", using: :btree
+  add_index "companies_employees", ["employee_id"], name: "index_companies_employees_on_employee_id", using: :btree
+
+  create_table "employees", force: :cascade do |t|
+    t.string   "full_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "payment_histories", force: :cascade do |t|
@@ -82,6 +102,8 @@ ActiveRecord::Schema.define(version: 20150908233054) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "companies_employees", "companies"
+  add_foreign_key "companies_employees", "employees"
   add_foreign_key "payment_histories", "payments"
   add_foreign_key "payments", "clients"
   add_foreign_key "sports", "players"
