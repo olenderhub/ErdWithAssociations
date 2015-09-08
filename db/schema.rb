@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150908232601) do
+ActiveRecord::Schema.define(version: 20150908233054) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,15 @@ ActiveRecord::Schema.define(version: 20150908232601) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
+
+  create_table "payment_histories", force: :cascade do |t|
+    t.integer  "credit_rating"
+    t.integer  "payment_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "payment_histories", ["payment_id"], name: "index_payment_histories_on_payment_id", using: :btree
 
   create_table "payments", force: :cascade do |t|
     t.string   "amount"
@@ -73,6 +82,7 @@ ActiveRecord::Schema.define(version: 20150908232601) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "payment_histories", "payments"
   add_foreign_key "payments", "clients"
   add_foreign_key "sports", "players"
   add_foreign_key "subjects", "students"
