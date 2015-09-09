@@ -1,0 +1,12 @@
+attributes:
+  - content
+  - foreign_keys
+  - primary_keys
+  - inheritance
+  - timestamps
+notation: bachman
+prepend_primary: true
+polymorphism: true
+orientation: horizontal
+title: true
+warn: true
