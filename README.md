@@ -11,6 +11,7 @@ ERD diagram for associations with information about Markdown
 - [x] has_one :through
 - [x] has_and_belongs_to_many
 - [x] has_and_belongs_to_many vs has_many :through
+- [x] polymorphic association
 
 ---
 
