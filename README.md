@@ -3,7 +3,8 @@ ERD diagram for associations with information about Markdown
 
 ### :necktie: Associations:
 
-- [x] Markdown
+##### [erdwithassociations.herokuapp.com](http://erdwithassociations.herokuapp.com) (ERD with Bachman notation)
+
 - [x] belongs_to
 - [x] has_one
 - [x] has_many
@@ -15,6 +16,7 @@ ERD diagram for associations with information about Markdown
 - [x] self joins association
 
 ---
+### Markdown:
 
 ### :notebook: [Writing in GitHub - Markdown Tutorial](https://help.github.com/categories/writing-on-github/)
 ### :bowtie: [List of emoji](http://www.emoji-cheat-sheet.com/)
